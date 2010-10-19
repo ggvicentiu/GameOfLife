@@ -15,8 +15,7 @@
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != typeof (Position)) return false;
-            return Equals((Position) obj);
+            return obj.GetType() == typeof (Position) && Equals((Position) obj);
         }
 
         public bool Equals(Position other)

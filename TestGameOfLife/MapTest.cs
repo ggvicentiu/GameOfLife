@@ -35,13 +35,15 @@ namespace TestGameOfLife
 
         private static Map GetMap()
         {
-            const int x = 20; 
-            const int y = 20;
+            var x = new Coordinate(20); 
+            var y = new Coordinate(20);
             var aliveCells = new List<Cell>();
             for(var i = 0; i<8;i++)
                 for (var ii = 0; ii < 15; ii++)
                 {
-                    aliveCells.Add(new Cell(i,ii));
+                    var coordX = new Coordinate(i);
+                    var coordY = new Coordinate(ii);
+                    aliveCells.Add(new Cell(coordX,coordY));
                 }
             return new Map(x, y, aliveCells);
         }

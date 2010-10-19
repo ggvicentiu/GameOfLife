@@ -40,18 +40,19 @@ namespace GameOfLife
         }
 
 
-        public Map(int x, int y, IEnumerable<Cell> aliveCells)
+        public Map(Coordinate x, Coordinate y, IEnumerable<Cell> aliveCells)
         {
-            X = x;
-            Y = y;
+            X = x.Value();
+            Y = y.Value();
             Factory = new StateFactory();
-            Cells = new List<Cell>((x+1) * (y+1));
+            Cells = new List<Cell>((X+1) * (Y+1));
             for (var i = 0; i < X+1; i++)
                 for (var j = 0; j < Y+1; j++)
                 {
-                    var cell = new Cell(i, j);
+                    var coordinateX = new Coordinate(i);
+                    var coordinateY = new Coordinate(j);
+                    var cell = new Cell(coordinateX, coordinateY);
                     cell.State = (aliveCells.Contains(cell)) ? (State) new Alive(cell) : new Dead(cell);
-                    
                     Cells.Add(cell);
                 }
         }

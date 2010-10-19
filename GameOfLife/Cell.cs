@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace GameOfLife
+﻿namespace GameOfLife
 {
     public class  Cell
     {
-        public Cell(int x, int y)
+        public Cell(Coordinate x, Coordinate y)
         {
-            Position = new Position(x,y);
+            Position = new Position(x.Value(),y.Value());
         }
 
         public Position Position{ get; private set;}

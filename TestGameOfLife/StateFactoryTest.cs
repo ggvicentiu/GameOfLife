@@ -72,7 +72,7 @@ namespace TestGameOfLife
         {
             var target = new StateFactory();
 
-            var cell = new Cell(1,2) {LiveNeighbours = 3};
+            var cell = new Cell(new Coordinate(1), new Coordinate(2)) {LiveNeighbours = 3};
             
             cell.State = new Alive(cell);
             

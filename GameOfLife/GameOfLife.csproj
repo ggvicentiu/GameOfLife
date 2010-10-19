@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Alive.cs" />
     <Compile Include="Cell.cs" />
+    <Compile Include="Coordinate.cs" />
     <Compile Include="Dead.cs" />
     <Compile Include="IStateFactory.cs" />
     <Compile Include="Map.cs" />

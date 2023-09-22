@@ -82,7 +82,7 @@ jobs:
       uses: microsoft/vstest-action@v1.0.0
       with:
         testAssembly: TestGameOfLife.dll
-        searchFolder: .\TestGameOfLife\bin\Debug\dotnet6.0\
+        searchFolder: ./TestGameOfLife/bin/Debug/dotnet6.0/
         runInParallel: true
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application

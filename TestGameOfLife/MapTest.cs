@@ -35,8 +35,8 @@ namespace TestGameOfLife
 
         private static Map GetMap()
         {
-            var x = new Coordinate(20); 
-            var y = new Coordinate(20);
+            var x = new Coordinate(30); 
+            var y = new Coordinate(30);
             var aliveCells = new List<Cell>();
             for(var i = 0; i<8;i++)
                 for (var ii = 0; ii < 15; ii++)
